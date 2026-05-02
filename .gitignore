@@ -1,0 +1,7 @@
+# IDE paths
+**/.idea
+**/.idea/**
+
+# NODE modules
+**/package-lock.json
+**/node_modules
