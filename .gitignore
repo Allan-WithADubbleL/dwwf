@@ -5,3 +5,10 @@
 # NODE modules
 **/package-lock.json
 **/node_modules
+
+# Backend database
+backend/database/migrations
+**/.env
+**/dev.db
+**/generated
+**/generated/**
