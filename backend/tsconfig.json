@@ -2,8 +2,8 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES6",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node"
   }
 }

@@ -6,17 +6,14 @@
   "author": "Alin Hrimiuc",
   "type": "commonjs",
   "main": "main.ts",
-
   "scripts": {
-    "init-database": "npx prisma init --datasource-provider sqlite",
-    "sync-database": "npx prisma migrate dev --name init && npx prisma generate",
-    "clean-database": "rm -rf .dev.db database/migrations .env generated",
-
+    "init-database": "npx prisma generate && tsx database/init.ts",
+    "sync-database": "npx prisma migrate dev",
+    "clean-database": "rm -rf .dev.db database/migrations .env node_modules/.prisma/client",
     "start": "tsx main.ts",
     "build": "tsc",
     "test": "jtest"
   },
-
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
@@ -24,9 +21,11 @@
     "ts-jest": "^29.4.9",
     "tsx": "^4.21.0"
   },
-
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.8.0",
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "prisma": "^7.8.0"
   }
